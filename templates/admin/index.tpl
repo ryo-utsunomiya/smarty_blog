@@ -8,7 +8,7 @@
 <body>
 <a href="create_form.php">記事の新規作成</a><br>
 <a href="edit_list.php">記事の編集</a><br>
-<a href="">記事の削除</a><br>
+<a href="delete_list.php">記事の削除</a><br>
 <a href="">カテゴリーの追加</a><br>
 <a href="">カテゴリーの編集</a><br>
 <a href="">カテゴリーの削除</a>
