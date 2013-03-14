@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>{block name=title}Smarty Blog{/block}</title>
     <style type="text/css">
-        #container { width: 80%; margin 0 auto; }
+        #container { width: 80%; margin: 0 auto; }
+        {block name="css"}{/block}
     </style>
 </head>
 <body>
