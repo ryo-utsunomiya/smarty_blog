@@ -6,8 +6,8 @@ ini_set('display_errors', 1);// デバッグ用にエラー表示
 require_once('/usr/local/lib/Smarty-3.1.13/libs/Smarty.class.php');
 
 // 必要なライブラリファイルを読み込み
-require_once('/usr/local/lib/getDb.php');
-require_once('functions.php');
+require_once('/usr/local/lib/getDb.php');//PDOオブジェクトを返すgetDb()を定義
+require_once('functions.php');//ユーティリティ関数を定義
 
 class Smarty_Blog extends Smarty {
 
@@ -21,6 +21,5 @@ class Smarty_Blog extends Smarty {
         $this->cache_dir    = '/var/www/dev.example.com/public_html/smarty_blog/cache/';
 
         $this->caching = false;// テスト環境で変更を確実に反映させるためfalse
-        //$this->assign('app_name', 'Blog');
    }
 }
