@@ -7,7 +7,7 @@
     <form action="delete_process.php" method="post">
 
     {section name=post loop=$posts}
-        <input type="checkbox" name="post_id" value="{$posts[post]['id']}" id="{$posts[post]['id']}" />
+        <input type="checkbox" name="post_id[]" value="{$posts[post]['id']}" id="{$posts[post]['id']}" />
         <label for="{$posts[post]['id']}">{$posts[post]['post_title']}</label>
         <br>
     {/section}
