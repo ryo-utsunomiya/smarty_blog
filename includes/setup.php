@@ -1,11 +1,19 @@
 <?php
-//namespace Smarty_Blog;
+
+// ディレクトリ設定
+if ($_SERVER['HTTP_HOST'] === 'localhost') {// ローカル環境
+    define('SMARTY_DIR', '../Smarty-3.1.13/libs/');
+    define('DB_DIR', '');
+} else {// VPS
+    define('SMARTY_DIR', '/usr/local/lib/Smarty-3.1.13/libs/');
+    define('DB_DIR', '/usr/local/lib/');
+}
 
 // Smartyライブラリを読み込み
-require_once('/usr/local/lib/Smarty-3.1.13/libs/Smarty.class.php');
+require_once(SMARTY_DIR . 'Smarty.class.php');
 
 // 必要なライブラリファイルを読み込み
-require_once('/usr/local/lib/getDb.php'); // PDOオブジェクトを返すgetDb()を定義
+require_once(DB_DIR . 'getDb.php'); // PDOオブジェクトを返すgetDb()を定義
 require_once('functions.php'); // ユーティリティ関数を定義
 
 class Smarty_Blog extends Smarty
