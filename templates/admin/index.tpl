@@ -11,6 +11,6 @@
 <a href="delete_list.php">記事の削除</a><br>
 <a href="add_category_form.php">カテゴリーの追加</a><br>
 <a href="edit_category_list.php">カテゴリーの編集</a><br>
-<a href="">カテゴリーの削除</a>
+<a href="delete_category_list.php">カテゴリーの削除</a>
 </body>
 </html>
