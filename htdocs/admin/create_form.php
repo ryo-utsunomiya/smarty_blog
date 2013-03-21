@@ -1,6 +1,21 @@
 <?php
+
 require_once('../../includes/setup.php');
 
-$smarty = new Smarty_Blog();
+try {
 
-$smarty->display('admin/create_form.tpl');
+    $db = getDb();
+    $stt = $db->prepare('SELECT category_id, category_name FROM categories');
+    $stt->execute();
+
+    $categories = $stt->fetchAll(PDO::FETCH_ASSOC);
+
+    $db = null;
+
+} catch (PDOException $e) {
+    die('error:' . $e->getMessage());
+}
+
+$smarty = new Smarty_Blog();
+$smarty->assign('categories', $categories);
+$smarty->display($smarty->tpl);
