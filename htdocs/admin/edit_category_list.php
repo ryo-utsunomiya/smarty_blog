@@ -2,8 +2,6 @@
 
 require_once('../../includes/setup.php');
 
-$smarty = new Smarty_Blog();
-
 try {
 
     $db = getDb();
@@ -16,6 +14,6 @@ try {
     die('error:' . $e->getMessage());
 }
 
+$smarty = new Smarty_Blog();
 $smarty->assign('categories', $categories);
-
 $smarty->display($smarty->tpl);
