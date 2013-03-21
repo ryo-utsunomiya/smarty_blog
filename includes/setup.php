@@ -19,7 +19,8 @@ require_once(SMARTY_DIR . 'Smarty.class.php');
 
 // 必要なライブラリファイルを読み込み
 require_once(DB_DIR . 'getDb.php'); // PDOオブジェクトを返すgetDb()を定義
-require_once('functions.php'); // ユーティリティ関数を定義
+require_once 'autoload.php'; // 未定義クラスを自動でrequire
+
 
 class Smarty_Blog extends Smarty
 {
